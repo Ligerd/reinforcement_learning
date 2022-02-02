@@ -72,7 +72,7 @@ def learnModel(env, samples=1e5):
     return trans_prob, reward
 
 
-def plot(success_rate, title, save=False):
+def plot(success_rate, title):
     """
     Plots for success rate over every iteration
 
@@ -84,6 +84,5 @@ def plot(success_rate, title, save=False):
     plt.title(title)
     plt.xlabel("Epoka")
     plt.ylabel("Wskaźnik sukcesu")
-    if save:
-        plt.savefig(title + ".png", dpi=150)
+    plt.savefig(title + ".png", dpi=150)
     plt.show()

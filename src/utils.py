@@ -3,14 +3,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def testPolicy(policy, env_str, win_state, trials=100):
+def testPolicy(policy, env_str, map_size, win_state, trials=100):
     """
     Get the average rate of successful episodes over given number of trials
     : param policy: function, a deterministic policy function
     : param trials: int, number of trials
     : return: float, average success rate
     """
-    env = gym.make(env_str)
+    env = gym.make(env_str, map_name=map_size, is_slippery=True)
     env.reset()
     success = 0
 
